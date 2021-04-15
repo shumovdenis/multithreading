@@ -23,22 +23,4 @@ public class ArraySumTask extends RecursiveTask<Integer> {
         return task1.join() + task2.join();
     }
 
-
-//    @Override
-//    protected Integer compute() {
-//        if((start - end) <= Main.ARRAY_SIZE/Main.numOfThreads) {
-//            int sum = 0;
-//            for (int i = start; i < end; i++) {
-//                sum += array[i];
-//            }
-//            return sum;
-//        } else {
-//            int middle = Main.ARRAY_SIZE / 2;
-//            ArraySumTask task1 = new ArraySumTask(array, start, middle);
-//            task1.fork();
-//            ArraySumTask task2 = new ArraySumTask(array, middle + 1, end);
-//            int secondValue = task2.compute();
-//            return task1.join()+ task2.join();
-//        }
-//    }
 }
